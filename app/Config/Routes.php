@@ -6,11 +6,11 @@ use CodeIgniter\Router\RouteCollection;
 
 // Autentikasi
 $routes->get('/', 'Auth::login');
-$routes->post('/auth/processLogin', 'Auth::processLogin');
-$routes->get('/auth/logout', 'Auth::logout');
+$routes->post('auth/processLogin', 'Auth::processLogin');
+$routes->get('auth/logout', 'Auth::logout');
 
 // Admin
-$routes->get('/admin', 'Admin::index', [
+$routes->get('admin', 'Admin::index', [
     'filter' => 'role:admin'
 ]);
 
